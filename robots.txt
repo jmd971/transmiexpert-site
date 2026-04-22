@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://transmiexpert-site.vercel.app/sitemap.xml
