@@ -618,23 +618,35 @@ footer{background:#0E1309;padding:3rem 2rem}
 <style>
 .nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;border:none;background:none}
 .nav-burger span{width:24px;height:2px;background:var(--dark);border-radius:2px;display:block;transition:transform .2s}
-.nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:var(--ivory);border-bottom:2px solid var(--border);padding:1.25rem;z-index:999;flex-direction:column;gap:.25rem;box-shadow:0 4px 20px rgba(0,0,0,.1)}
-.nav-mobile a{font-size:1rem;font-weight:500;color:var(--dark);text-decoration:none;padding:.75rem 1rem;border-radius:8px;display:block}
+.nav-mobile{display:none;position:absolute;top:60px;left:0;right:0;background:var(--ivory);border-bottom:2px solid var(--border);padding:1rem 1.25rem 1.25rem;z-index:9999;flex-direction:column;gap:.15rem;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.nav-mobile a{font-size:1rem;font-weight:500;color:var(--dark);text-decoration:none;padding:.75rem 1rem;border-radius:8px;display:block;border-bottom:1px solid var(--border)}
+.nav-mobile a:last-child{border-bottom:none}
 .nav-mobile a:hover{background:var(--ivory2)}
-.nav-mobile .nc-m{background:var(--green);color:#fff !important;text-align:center;font-weight:600;margin-top:.5rem}
+.nav-mobile .nc-m{background:var(--green);color:#fff !important;text-align:center;font-weight:600;margin-top:.5rem;border-bottom:none !important}
 @media(max-width:768px){
   .nav-burger{display:flex}
   .nav-mobile.open{display:flex}
+  nav{position:sticky;top:0;z-index:1000}
 }
+
+/* logo mobile fix */
+@media(max-width:768px){
+  .logo{max-width:calc(100% - 100px);overflow:hidden}
+  .logo svg{flex-shrink:0;width:28px;height:25px}
+  .ln{font-size:1rem !important;white-space:nowrap}
+  .np{font-size:.78rem;white-space:nowrap}
+  .ni{padding:0 .85rem !important}
+}
+/* logo-mobile-fix */
 </style></style>
 </head>
 <body>
 <nav>
-  <div class="ni" style="max-width:1200px;margin:0 auto;padding:0 2rem;height:70px;display:flex;align-items:center;justify-content:space-between;gap:2rem;box-sizing:border-box">
-    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0"><svg width="34" height="30" viewBox="0 0 34 30" fill="none" style="flex-shrink:0"><path d="M17 1L1 12.5V28H12V19H22V28H33V12.5L17 1Z" fill="#2D7D3A"/><path d="M17 1L1 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><path d="M17 1L33 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><rect x="13" y="19" width="8" height="9" fill="#1A2410" rx="1"/><rect x="14" y="11" width="6" height="5" rx="0.5" fill="rgba(255,255,255,0.25)"/></svg><div style="line-height:1.2"><div class="ln" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:700;color:#151C10;letter-spacing:.02em">TRANSMIEXPERT</div><div class="ls" style="font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#2D7D3A">Expert Immobilier · Succession · Donation</div></div></a>
+  <div class="ni" style="max-width:1200px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem;box-sizing:border-box">
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0"><svg width="34" height="30" viewBox="0 0 34 30" fill="none" style="flex-shrink:0"><path d="M17 1L1 12.5V28H12V19H22V28H33V12.5L17 1Z" fill="#2D7D3A"/><path d="M17 1L1 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><path d="M17 1L33 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><rect x="13" y="19" width="8" height="9" fill="#1A2410" rx="1"/><rect x="14" y="11" width="6" height="5" rx="0.5" fill="rgba(255,255,255,0.25)"/></svg><div style="line-height:1.2;min-width:0"><div class="ln" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:700;color:#151C10;letter-spacing:.02em">TRANSMIEXPERT</div><div class="ls" style="font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#2D7D3A">Expert Immobilier · Succession · Donation</div></div></a>
     <div class="nl" style="display:flex;align-items:center;gap:0"><a href="nos-services.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Nos services</a><a href="votre-situation.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Votre situation</a><a href="territoires.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Territoires</a><a href="ressources.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Ressources</a><a href="equipe.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">À propos</a><a href="https://my.transmiexpert.fr/widget/bookings/transmiexpert-consultation-initiale" class="nc" style="background:#2D7D3A;color:#fff;font-weight:600;font-size:.9375rem;padding:.5rem .9rem;border-radius:8px;text-decoration:none;white-space:nowrap">Consultation gratuite</a></div>
     <div class="np" style="font-size:.9375rem;color:#4A5540;white-space:nowrap">📞 0690 73 45 80</div>
-  <button class="nav-burger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
+  <button class="nav-burger" onclick="this.closest('nav').querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
   <span></span><span></span><span></span>
 </button>
 <div class="nav-mobile">
@@ -1222,11 +1234,11 @@ footer{background:#0E1309;padding:3rem 2rem}
 </head>
 <body>
 <nav>
-  <div class="ni" style="max-width:1200px;margin:0 auto;padding:0 2rem;height:70px;display:flex;align-items:center;justify-content:space-between;gap:2rem;box-sizing:border-box">
-    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0"><svg width="34" height="30" viewBox="0 0 34 30" fill="none" style="flex-shrink:0"><path d="M17 1L1 12.5V28H12V19H22V28H33V12.5L17 1Z" fill="#2D7D3A"/><path d="M17 1L1 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><path d="M17 1L33 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><rect x="13" y="19" width="8" height="9" fill="#1A2410" rx="1"/><rect x="14" y="11" width="6" height="5" rx="0.5" fill="rgba(255,255,255,0.25)"/></svg><div style="line-height:1.2"><div class="ln" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:700;color:#151C10;letter-spacing:.02em">TRANSMIEXPERT</div><div class="ls" style="font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#2D7D3A">Expert Immobilier · Succession · Donation</div></div></a>
+  <div class="ni" style="max-width:1200px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem;box-sizing:border-box">
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0"><svg width="34" height="30" viewBox="0 0 34 30" fill="none" style="flex-shrink:0"><path d="M17 1L1 12.5V28H12V19H22V28H33V12.5L17 1Z" fill="#2D7D3A"/><path d="M17 1L1 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><path d="M17 1L33 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><rect x="13" y="19" width="8" height="9" fill="#1A2410" rx="1"/><rect x="14" y="11" width="6" height="5" rx="0.5" fill="rgba(255,255,255,0.25)"/></svg><div style="line-height:1.2;min-width:0"><div class="ln" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:700;color:#151C10;letter-spacing:.02em">TRANSMIEXPERT</div><div class="ls" style="font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#2D7D3A">Expert Immobilier · Succession · Donation</div></div></a>
     <div class="nl" style="display:flex;align-items:center;gap:0"><a href="nos-services.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Nos services</a><a href="votre-situation.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Votre situation</a><a href="territoires.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Territoires</a><a href="ressources.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Ressources</a><a href="equipe.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">À propos</a><a href="https://my.transmiexpert.fr/widget/bookings/transmiexpert-consultation-initiale" class="nc" style="background:#2D7D3A;color:#fff;font-weight:600;font-size:.9375rem;padding:.5rem .9rem;border-radius:8px;text-decoration:none;white-space:nowrap">Consultation gratuite</a></div>
     <div class="np" style="font-size:.9375rem;color:#4A5540;white-space:nowrap">📞 0690 73 45 80</div>
-  <button class="nav-burger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
+  <button class="nav-burger" onclick="this.closest('nav').querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
   <span></span><span></span><span></span>
 </button>
 <div class="nav-mobile">
