@@ -454,14 +454,35 @@ p.sp.w{color:rgba(255,255,255,.52)}
 .sbtn{display:block;text-align:center;background:#fff;color:var(--dark);font-weight:600;font-size:.9rem;padding:.75rem;border-radius:8px;text-decoration:none;margin-bottom:.6rem}
 .sbtn.g{background:var(--green);color:#fff}
 @media(max-width:900px){.row2,.grid2{grid-template-columns:1fr;gap:2rem}.grid3{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr 1fr}.nl{display:none}}
+
+/* ═══ NAVIGATION ═══ */
+nav{position:sticky;top:0;z-index:100;background:var(--ivory);border-bottom:1px solid var(--border)}
+.ni{max-width:1200px;margin:0 auto;padding:0 2rem;height:70px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.ln{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--dark);letter-spacing:.02em}
+.ls{font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--green)}
+.nl{display:flex;align-items:center;gap:.15rem}
+.nl a{font-size:.9375rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.5rem .9rem;border-radius:6px;transition:color .15s,background .15s}
+.nl a:hover{color:var(--text);background:var(--ivory2)}
+.nc{background:var(--green)!important;color:#fff!important;border-radius:8px!important;font-weight:600!important}
+.nc:hover{background:var(--green2)!important}
+.np{font-size:.9375rem;color:var(--muted);white-space:nowrap}
+/* ═══ FOOTER ═══ */
+footer{background:#0E1309;padding:3rem 2rem}
+.fi2{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.flo{display:flex;align-items:center;gap:.75rem}
+.fln{font-family:var(--serif);font-size:1rem;color:rgba(255,255,255,.4);letter-spacing:.02em}
+.fs{width:1px;height:18px;background:rgba(255,255,255,.08)}
+.ft{font-size:.8125rem;color:rgba(255,255,255,.22)}
+.fr{font-size:.8125rem;color:rgba(255,255,255,.22);text-align:right;line-height:1.9}
 </style>
 </head>
 <body>
 <nav>
-  <div class="ni">
-    <a href="index.html" class="logo"><div><div class="ln">TRANSMIEXPERT</div><div class="ls">Expert Immobilier · Succession · Donation</div></div></a>
-    <div class="nl"><a href="nos-services.html">Nos services</a><a href="votre-situation.html">Votre situation</a><a href="guadeloupe.html">Territoires</a><a href="ressources.html">Ressources</a><a href="equipe.html">À propos</a><a href="contact.html" class="nc">Consultation gratuite</a></div>
-    <div class="np">📞 0690 73 45 80</div>
+  <div class="ni" style="max-width:1200px;margin:0 auto;padding:0 2rem;height:70px;display:flex;align-items:center;justify-content:space-between;gap:2rem;box-sizing:border-box">
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0"><svg width="34" height="30" viewBox="0 0 34 30" fill="none" style="flex-shrink:0"><path d="M17 1L1 12.5V28H12V19H22V28H33V12.5L17 1Z" fill="#2D7D3A"/><path d="M17 1L1 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><path d="M17 1L33 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><rect x="13" y="19" width="8" height="9" fill="#1A2410" rx="1"/><rect x="14" y="11" width="6" height="5" rx="0.5" fill="rgba(255,255,255,0.25)"/></svg><div style="line-height:1.2"><div class="ln" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:700;color:#151C10;letter-spacing:.02em">TRANSMIEXPERT</div><div class="ls" style="font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#2D7D3A">Expert Immobilier · Succession · Donation</div></div></a>
+    <div class="nl" style="display:flex;align-items:center;gap:0"><a href="nos-services.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Nos services</a><a href="votre-situation.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Votre situation</a><a href="guadeloupe.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Territoires</a><a href="ressources.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Ressources</a><a href="equipe.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">À propos</a><a href="contact.html" class="nc" style="background:#2D7D3A;color:#fff;font-weight:600;font-size:.9375rem;padding:.5rem .9rem;border-radius:8px;text-decoration:none;white-space:nowrap">Consultation gratuite</a></div>
+    <div class="np" style="font-size:.9375rem;color:#4A5540;white-space:nowrap">📞 0690 73 45 80</div>
   </div>
 </nav>
 <div class="ph"><div class="phi"><div class="bc"><a href="index.html">Accueil</a><span>></span><a href="guadeloupe.html">Guadeloupe</a><span>></span><span>Pointe-a-Pitre</span></div><div class="pe">Commune 97110</div><h1 class="pt">Mediation successorale<br>a <em>Pointe-a-Pitre.</em></h1><p class="ps">TransmiExpert intervient a Pointe-a-Pitre et dans toute la commune. Expert local en succession et sortie d indivision, Luc Silvestre connait les specificites foncières de votre secteur.</p><div class="acts"><a href="contact.html" class="bp">Consultation gratuite</a><a href="tel:+590690734580" class="bg">0690 73 45 80</a></div></div></div>
