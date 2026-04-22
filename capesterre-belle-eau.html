@@ -645,25 +645,69 @@ footer{background:#0E1309;padding:3rem 2rem}
 </style></style>
 </head>
 <body>
-<nav>
-  <div class="ni" style="max-width:1200px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem;box-sizing:border-box">
-    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0"><svg width="34" height="30" viewBox="0 0 34 30" fill="none" style="flex-shrink:0"><path d="M17 1L1 12.5V28H12V19H22V28H33V12.5L17 1Z" fill="#2D7D3A"/><path d="M17 1L1 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><path d="M17 1L33 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><rect x="13" y="19" width="8" height="9" fill="#1A2410" rx="1"/><rect x="14" y="11" width="6" height="5" rx="0.5" fill="rgba(255,255,255,0.25)"/></svg><div style="line-height:1.2;min-width:0"><div class="ln" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:700;color:#151C10;letter-spacing:.02em">TRANSMIEXPERT</div><div class="ls" style="font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#2D7D3A">Expert Immobilier · Succession · Donation</div></div></a>
-    <div class="nl" style="display:flex;align-items:center;gap:0"><a href="nos-services.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Nos services</a><a href="votre-situation.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Votre situation</a><a href="territoires.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Territoires</a><a href="ressources.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Ressources</a><a href="conferences.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">Conférences</a><a href="equipe.html" style="font-size:.9375rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .75rem;border-radius:6px;white-space:nowrap">À propos</a><a href="https://my.transmiexpert.fr/widget/bookings/transmiexpert-consultation-initiale" class="nc" style="background:#2D7D3A;color:#fff;font-weight:600;font-size:.9375rem;padding:.5rem .9rem;border-radius:8px;text-decoration:none;white-space:nowrap">Consultation gratuite</a></div>
-    <div class="np" style="font-size:.9375rem;color:#4A5540;white-space:nowrap">📞 0690 73 45 80</div>
-  <button class="nav-burger" onclick="this.closest('nav').querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
-  <span></span><span></span><span></span>
-</button>
-<div class="nav-mobile">
-  <a href="nos-services.html">Nos services</a>
-  <a href="votre-situation.html">Votre situation</a>
-  <a href="territoires.html">Territoires</a>
-  <a href="ressources.html">Ressources</a>
-  <a href="conferences.html">Conférences</a>
-  <a href="equipe.html">À propos</a>
-  <a href="https://my.transmiexpert.fr/widget/bookings/transmiexpert-consultation-initiale" target="_blank" class="nc-m">Consultation gratuite</a>
-  <a href="tel:+590690734580" style="color:var(--green);text-align:center;font-weight:600">📞 0690 73 45 80</a>
-</div>
+<nav style="position:sticky;top:0;z-index:1000;background:var(--ivory);border-bottom:1px solid var(--border)">
+  <!-- BARRE PRINCIPALE -->
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box">
+    
+    <!-- LOGO -->
+    <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0">
+      <svg width="34" height="30" viewBox="0 0 34 30" fill="none"><path d="M17 1L1 12.5V28H12V19H22V28H33V12.5L17 1Z" fill="#2D7D3A"/><path d="M17 1L1 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><path d="M17 1L33 12.5" stroke="#1A2410" stroke-width="1.5" stroke-linecap="round"/><rect x="13" y="19" width="8" height="9" fill="#1A2410" rx="1"/><rect x="14" y="11" width="6" height="5" rx="0.5" fill="rgba(255,255,255,0.25)"/></svg>
+      <div style="line-height:1.2">
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;font-weight:700;color:#151C10;letter-spacing:.02em">TRANSMIEXPERT</div>
+        <div class="nav-sub" style="font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#2D7D3A">Expert Immobilier · Succession · Donation</div>
+      </div>
+    </a>
+
+    <!-- LIENS DESKTOP -->
+    <div class="nav-desktop" style="display:flex;align-items:center;gap:.1rem">
+      <a href="nos-services.html" style="font-size:.9rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .8rem;border-radius:6px">Nos services</a>
+      <a href="votre-situation.html" style="font-size:.9rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .8rem;border-radius:6px">Votre situation</a>
+      <a href="territoires.html" style="font-size:.9rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .8rem;border-radius:6px">Territoires</a>
+      <a href="ressources.html" style="font-size:.9rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .8rem;border-radius:6px">Ressources</a>
+      <a href="conferences.html" style="font-size:.9rem;font-weight:500;color:#4A5540;text-decoration:none;padding:.5rem .8rem;border-radius:6px">Conférences</a>
+      <a href="https://my.transmiexpert.fr/widget/bookings/transmiexpert-consultation-initiale" target="_blank" style="font-size:.9rem;font-weight:600;color:#fff;background:#2D7D3A;text-decoration:none;padding:.5rem 1rem;border-radius:8px;margin-left:.4rem">Consultation gratuite</a>
+    </div>
+
+    <!-- BURGER MOBILE UNIQUEMENT -->
+    <button id="burger-btn" onclick="toggleMenu()" style="display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.6rem .7rem;border:1.5px solid #C8D4C0;background:#fff;border-radius:8px;flex-shrink:0" aria-label="Menu">
+      <span style="width:20px;height:2px;background:#151C10;border-radius:2px;display:block"></span>
+      <span style="width:20px;height:2px;background:#151C10;border-radius:2px;display:block"></span>
+      <span style="width:20px;height:2px;background:#151C10;border-radius:2px;display:block"></span>
+    </button>
   </div>
+
+  <!-- MENU MOBILE (caché par défaut) -->
+  <div id="nav-mobile-menu" style="display:none;flex-direction:column;gap:.4rem;padding:1rem 1.25rem 1.5rem;background:#fff;border-top:1px solid #C8D4C0;box-shadow:0 8px 24px rgba(0,0,0,.15)">
+    <a href="nos-services.html" style="font-size:1rem;font-weight:600;color:#151C10;text-decoration:none;padding:.85rem 1rem;border-radius:10px;background:#F5F0E6;display:block">Nos services</a>
+    <a href="votre-situation.html" style="font-size:1rem;font-weight:600;color:#151C10;text-decoration:none;padding:.85rem 1rem;border-radius:10px;background:#F5F0E6;display:block">Votre situation</a>
+    <a href="territoires.html" style="font-size:1rem;font-weight:600;color:#151C10;text-decoration:none;padding:.85rem 1rem;border-radius:10px;background:#F5F0E6;display:block">Territoires</a>
+    <a href="ressources.html" style="font-size:1rem;font-weight:600;color:#151C10;text-decoration:none;padding:.85rem 1rem;border-radius:10px;background:#F5F0E6;display:block">Ressources</a>
+    <a href="conferences.html" style="font-size:1rem;font-weight:600;color:#151C10;text-decoration:none;padding:.85rem 1rem;border-radius:10px;background:#F5F0E6;display:block">Conférences</a>
+    <a href="equipe.html" style="font-size:1rem;font-weight:600;color:#151C10;text-decoration:none;padding:.85rem 1rem;border-radius:10px;background:#F5F0E6;display:block">À propos</a>
+    <a href="https://my.transmiexpert.fr/widget/bookings/transmiexpert-consultation-initiale" target="_blank" style="font-size:1rem;font-weight:700;color:#fff;background:#2D7D3A;text-decoration:none;padding:.9rem 1rem;border-radius:10px;display:block;text-align:center;margin-top:.25rem">Consultation gratuite</a>
+    <a href="tel:+590690734580" style="font-size:1rem;font-weight:600;color:#2D7D3A;text-decoration:none;padding:.7rem 1rem;border-radius:10px;display:block;text-align:center">📞 0690 73 45 80</a>
+  </div>
+
+  <style>
+    @media(max-width:768px){
+      .nav-desktop{display:none !important}
+      #burger-btn{display:flex !important}
+      .nav-sub{display:none}
+    }
+  </style>
+  <script>
+    function toggleMenu(){
+      var m = document.getElementById('nav-mobile-menu');
+      m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+    }
+    // Fermer au clic en dehors
+    document.addEventListener('click', function(e){
+      var nav = document.querySelector('nav');
+      if(!nav.contains(e.target)){
+        document.getElementById('nav-mobile-menu').style.display = 'none';
+      }
+    });
+  </script>
 </nav>
 <div class="ph"><div class="phi"><div class="bc"><a href="index.html">Accueil</a><span>></span><a href="guadeloupe.html">Guadeloupe</a><span>></span><span>Capesterre-Belle-Eau</span></div><div class="pe">Commune 97130</div><h1 class="pt">Médiation successorale<br>a <em>Capesterre-Belle-Eau.</em></h1><p class="ps">TransmiExpert intervient a Capesterre-Belle-Eau et dans toute la commune. Expert local en succession et sortie d indivision, Luc Silvestre connait les specificites foncières de votre secteur.</p><div class="acts"><a href="https://my.transmiexpert.fr/widget/bookings/transmiexpert-consultation-initiale" class="bp">Consultation gratuite</a><a href="tel:+590690734580" class="bg">0690 73 45 80</a></div></div></div>
 
