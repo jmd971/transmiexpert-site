@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://transmiexpert-site.vercel.app/sitemap.xml
+Sitemap: https://transmiexpert.fr/sitemap.xml
