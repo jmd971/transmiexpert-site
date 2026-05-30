@@ -721,6 +721,21 @@ img {
 }
 /* Textes en .w déjà gérés — forcer quand même */
 p.sp.w { color: rgba(255,255,255,.75) !important; }
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid var(--green, #2D7D3A);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 </style></style>
 </head>
 <body>
