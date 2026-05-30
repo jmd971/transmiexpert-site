@@ -13,6 +13,15 @@
       ]
     }
   ],
+  "redirects": [
+    { "source": "/sortie-indivision-guadeloupe", "destination": "/sortie-indivision", "permanent": true },
+    { "source": "/mediation-successorale-guadeloupe", "destination": "/mediation", "permanent": true },
+    { "source": "/assistance-succession-guadeloupe", "destination": "/nos-services", "permanent": true },
+    { "source": "/accompagnement-pour-vente-immobiliere", "destination": "/evaluation", "permanent": true },
+    { "source": "/conferences-debat-succession-guadeloupe", "destination": "/conferences", "permanent": true },
+    { "source": "/expert-succession-baie-mahault", "destination": "/baie-mahault", "permanent": true },
+    { "source": "/politique-confidentialite", "destination": "/confidentialite", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/", "destination": "/index.html" }
   ]
