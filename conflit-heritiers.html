@@ -804,5 +804,19 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var path = location.pathname.split('/').pop()||'index.html';
+  if(!path) path='index.html';
+  document.querySelectorAll('.nav-desktop a,[id="nav-mobile-menu"] a').forEach(function(a){
+    var href = a.getAttribute('href');
+    if(href && href===path && !href.startsWith('http') && !href.startsWith('tel')){
+      a.style.color='#2D7D3A';
+      a.style.fontWeight='700';
+      a.style.background='rgba(45,125,58,.09)';
+    }
+  });
+})();
+</script>
 </body>
 </html>
