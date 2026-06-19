@@ -21,6 +21,17 @@
   ],
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.transmiexpert.fr"
+        }
+      ],
+      "destination": "https://transmiexpert.fr/$1",
+      "permanent": true
+    },
+    {
       "source": "/sortie-indivision-guadeloupe",
       "destination": "/sortie-indivision",
       "permanent": true
