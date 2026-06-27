@@ -32,6 +32,11 @@
       "permanent": true
     },
     {
+      "source": "/expertise-en-succession-immobiliere",
+      "destination": "/guadeloupe",
+      "permanent": true
+    },
+    {
       "source": "/sortie-indivision-guadeloupe",
       "destination": "/sortie-indivision",
       "permanent": true
