@@ -28,7 +28,7 @@ Mémoire projet pour Claude Code. À lire à chaque session avant toute modifica
 ## 2. Architecture du contenu
 
 ### Pages produit
-- `pack-serenite.html` (offre 179 €, anticipateur)
+- `pack-serenite.html` (offre par abonnement 9,90/14,90 €/mois + éditions papier 60/90 €, anticipateur)
 
 ### Pages "situation" (client en crise)
 `succession-bloquee`, `conflit-heritiers`, `terrain-familial`, `bien-occupe-heritier`,
@@ -77,19 +77,22 @@ Deux portes d'entrée indépendantes, plus un canal terrain.
   coordonner avec le notaire).
 - Cible : client en CRISE (succession bloquée, conflit, indivision).
 
-### Porte 2 — Pack Sérénité (produit, 179 €)
-- 179 € = un DÉMARRAGE ACCOMPAGNÉ de la mise en ordre patrimoniale. Il comprend :
-  1. un rendez-vous de MISE EN ROUTE avec Luc (le client n'est jamais seul face
-     au document — c'est le cœur de la valeur, à dire tôt et clairement) ;
-  2. un LIVRET patrimonial personnel, à son nom, qui rassemble et sécurise tout
-     au même endroit ;
-  3. la PREMIÈRE ANNÉE d'abonnement INCLUSE : possibilité de poser une question
-     à tout moment.
-- L'abonnement se renouvelle ensuite chaque année (service à la demande, pas de
-  mise à jour push). Renouvellement affiché 99 €/an dans pack-serenite.html —
-  [À VALIDER] si ce tarif est définitif.
+### Porte 2 — Pack Sérénité (livret par abonnement — grille de juillet 2026)
+- Remplace l'ancien pack one-shot à 179 € (abandonné : ne se vendait pas).
+  Ne JAMAIS réintroduire le 179 € ni le renouvellement 99 €/an.
+- La grille :
+  1. ESSENTIEL — 9,90 €/mois : application en ligne + livret PDF (27 pages)
+     + support applicatif. SANS conseil sur la transmission.
+  2. ACCOMPAGNÉ — 14,90 €/mois : idem + 2 h d'assistance transmission avec Luc.
+     2 h AU TOTAL (pas par mois). Objectif business : ces heures servent à
+     transformer vers les autres prestations (évaluation, médiation).
+  3. Éditions papier : livret personnalisé imprimé 60 € (réservé abonnés) ;
+     livret design vierge 90 € (toutes les thématiques, à remplir à la main).
+- L'application vit dans le repo jmd971/new_livret_transmiexpert
+  (Vercel : new-livret-transmiexpert.vercel.app). Pas encore de paiement en
+  ligne : la vente passe par le rendez-vous consultation-livret et le contact.
 - Cible : ANTICIPATEUR (pas encore de problème ; veut bien faire pour les siens).
-- Un acheteur du Pack peut ensuite prendre un accompagnement payant avec Luc :
+- Un abonné peut ensuite prendre un accompagnement payant avec Luc :
   c'est une suite POSSIBLE, jamais forcée.
 
 ### Canal terrain
@@ -125,16 +128,17 @@ Pour tout bloc ou page Pack, dérouler dans cet ordre :
 1. Le GESTE qu'on pose pour protéger les siens (fierté, transmission). PAS la peur :
    l'anticipateur n'a pas de crise présente, l'aversion à la perte ne fonctionne pas
    sur lui. Lever sur l'identité ("être celui qui a fait le bon geste") et le legacy.
-2. ON LE FAIT AVEC VOUS : le rendez-vous de mise en route inclus. Le client n'a pas
-   à savoir par où commencer. C'est ce qui justifie 179 € face à un simple document.
-3. LE LIVRET à son nom, qui rassemble et sécurise tout.
-4. LA TRANQUILLITÉ INCLUSE UN AN : une question, un doute, un courrier du notaire —
-   quelqu'un répond.
+2. VOUS ÊTES GUIDÉ : l'application guide thème par thème, le client n'a pas
+   à savoir par où commencer. Avec la formule Accompagné, Luc répond (2 h incluses,
+   au total). C'est ce qui justifie l'abonnement face à un simple document.
+3. LE LIVRET à son nom, qui rassemble et sécurise tout (PDF 27 pages ;
+   éditions papier possibles : 60 € imprimé abonné, 90 € vierge).
+4. PRIX D'ENTRÉE FAIBLE : « dès 9,90 €/mois ». Ne jamais présenter la grille
+   comme un catalogue de 4 produits : une porte d'entrée simple, avec options.
 
-- Ne PAS vendre "un livret + un abonnement" comme deux choses : l'abonnement est
-  une QUALITÉ du produit (tranquillité garantie un an), pas une ligne de prix.
-- Mention du renouvellement annuel : transparente mais discrète, jamais l'argument
-  principal.
+- La distinction Essentiel/Accompagné se joue sur l'assistance de Luc : Essentiel
+  = support applicatif SEULEMENT (jamais de conseil transmission) ; toujours
+  respecter cette frontière dans le wording.
 - CTA du Pack = verbe de démarrage accompagné, type "Démarrer mon Pack Sérénité",
   pointant vers `consultation-livret`. Jamais "commander" sec ni "réserver" sec.
 
