@@ -808,24 +808,69 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   <div class="sl g">À quoi ressemble votre livret</div>
   <h2 class="sh" style="margin-bottom:.75rem">Feuilletez un extrait.</h2>
   <p style="font-size:var(--base);color:var(--muted);line-height:1.7;max-width:640px;margin-bottom:2rem">Quatre pages du livret tel que vous le recevrez — 27 pages au total, mises en page avec soin, générées à partir de ce que vous renseignez. Les informations ci-dessous sont fictives, à titre d'exemple.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.5rem">
+  <style>
+    .livret-thumb:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(26,23,18,.16)!important}
+    .livret-thumb:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+    #livret-lightbox button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+    @media(prefers-reduced-motion:reduce){.livret-thumb{transition:none!important}.livret-thumb:hover{transform:none}}
+  </style>
+  <div class="extrait-gallery" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.5rem">
     <figure style="margin:0">
-      <img src="images/livret-extrait-couverture.jpg" alt="Couverture du Livret de Succession TransmiExpert — exemple" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(26,23,18,.08)">
+      <img class="livret-thumb" role="button" tabindex="0" src="images/livret-extrait-couverture.jpg" alt="Couverture du Livret de Succession TransmiExpert — exemple" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(26,23,18,.08);cursor:zoom-in;transition:transform .15s,box-shadow .15s">
       <figcaption style="font-size:var(--sm);color:var(--muted);margin-top:.6rem;text-align:center">La couverture, à votre nom</figcaption>
     </figure>
     <figure style="margin:0">
-      <img src="images/livret-extrait-tableau-de-bord.jpg" alt="Page « Où en est votre dossier » du livret — exemple avec données fictives" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(26,23,18,.08)">
+      <img class="livret-thumb" role="button" tabindex="0" src="images/livret-extrait-tableau-de-bord.jpg" alt="Page « Où en est votre dossier » du livret — exemple avec données fictives" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(26,23,18,.08);cursor:zoom-in;transition:transform .15s,box-shadow .15s">
       <figcaption style="font-size:var(--sm);color:var(--muted);margin-top:.6rem;text-align:center">Votre dossier en un regard</figcaption>
     </figure>
     <figure style="margin:0">
-      <img src="images/livret-extrait-indivisions.jpg" alt="Page « Vos indivisions en cours » du livret — exemple avec données fictives" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(26,23,18,.08)">
+      <img class="livret-thumb" role="button" tabindex="0" src="images/livret-extrait-indivisions.jpg" alt="Page « Vos indivisions en cours » du livret — exemple avec données fictives" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(26,23,18,.08);cursor:zoom-in;transition:transform .15s,box-shadow .15s">
       <figcaption style="font-size:var(--sm);color:var(--muted);margin-top:.6rem;text-align:center">Vos indivisions, posées noir sur blanc</figcaption>
     </figure>
     <figure style="margin:0">
-      <img src="images/livret-extrait-resume.jpg" alt="Page « Résumé de votre situation » du livret — exemple avec données fictives" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(26,23,18,.08)">
+      <img class="livret-thumb" role="button" tabindex="0" src="images/livret-extrait-resume.jpg" alt="Page « Résumé de votre situation » du livret — exemple avec données fictives" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(26,23,18,.08);cursor:zoom-in;transition:transform .15s,box-shadow .15s">
       <figcaption style="font-size:var(--sm);color:var(--muted);margin-top:.6rem;text-align:center">Le résumé à partager avec votre notaire</figcaption>
     </figure>
   </div>
+  <p style="font-size:var(--sm);color:var(--muted);margin-top:1.25rem;text-align:center">Cliquez sur une page pour l'agrandir et feuilleter l'extrait.</p>
+  <div id="livret-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Aperçu du livret" style="position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;background:rgba(26,23,18,.92);padding:1.5rem">
+    <button id="lb-close" type="button" aria-label="Fermer l'aperçu" style="position:absolute;top:1rem;right:1.25rem;width:44px;height:44px;border:none;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer">×</button>
+    <button id="lb-prev" type="button" aria-label="Page précédente" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);width:44px;height:44px;border:none;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer">‹</button>
+    <figure style="margin:0;max-width:min(92vw,640px);text-align:center">
+      <img id="lb-img" src="" alt="" style="max-width:100%;max-height:80vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+      <figcaption id="lb-cap" style="color:#fff;margin-top:1rem;font-size:var(--base)"></figcaption>
+    </figure>
+    <button id="lb-next" type="button" aria-label="Page suivante" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);width:44px;height:44px;border:none;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer">›</button>
+  </div>
+  <script>
+  (function(){
+    var thumbs=[].slice.call(document.querySelectorAll('.livret-thumb'));
+    var lb=document.getElementById('livret-lightbox');
+    if(!thumbs.length||!lb)return;
+    var img=document.getElementById('lb-img'),cap=document.getElementById('lb-cap'),
+        closeBtn=document.getElementById('lb-close'),cur=0;
+    var data=thumbs.map(function(t){var fig=t.parentNode,c=fig?fig.querySelector('figcaption'):null;
+      return {src:t.getAttribute('src'),alt:t.getAttribute('alt'),cap:c?c.textContent:''};});
+    function show(i){cur=(i+data.length)%data.length;img.src=data[cur].src;img.alt=data[cur].alt;cap.textContent=data[cur].cap;}
+    function openLb(i){show(i);lb.style.display='flex';lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';closeBtn.focus();}
+    function closeLb(){lb.style.display='none';lb.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+    thumbs.forEach(function(t,i){
+      t.addEventListener('click',function(){openLb(i);});
+      t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(i);}});
+    });
+    closeBtn.addEventListener('click',closeLb);
+    document.getElementById('lb-prev').addEventListener('click',function(e){e.stopPropagation();show(cur-1);});
+    document.getElementById('lb-next').addEventListener('click',function(e){e.stopPropagation();show(cur+1);});
+    lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+    document.addEventListener('keydown',function(e){
+      if(lb.style.display!=='flex')return;
+      if(e.key==='Escape')closeLb();
+      else if(e.key==='ArrowLeft')show(cur-1);
+      else if(e.key==='ArrowRight')show(cur+1);
+    });
+  })();
+  </script>
+
 </div></div>
 
 <div class="sec dark"><div class="si">
