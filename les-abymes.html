@@ -738,6 +738,23 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   ]
 }
 </script>
+<style>
+.vl{list-style:none;margin:1.5rem 0 0;padding:0;border-top:1px solid var(--border)}
+.vl li{padding:1.1rem 0;border-bottom:1px solid var(--border)}
+.vl h3{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--dark);margin:0 0 .3rem}
+.vl p{margin:0;font-size:1rem;color:var(--muted);line-height:1.55}
+.vl-rep li{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:.25rem 1.5rem;align-items:baseline;padding:.85rem 0}
+.vl-rep strong{font-weight:600;color:var(--dark);font-size:1rem}
+.vl-rep span{color:var(--muted);font-size:.95rem}
+.vl-com{list-style:none;margin:.6rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.3rem 0}
+.vl-com li{font-size:1rem;line-height:1.5}
+.vl-com li:not(:last-child)::after{content:",";margin-right:.55rem}
+.vl-com a{color:var(--dark);text-decoration:none;border-bottom:1px solid var(--border);transition:border-color .15s,color .15s}
+.vl-com a:hover{color:var(--green);border-color:var(--green)}
+.vl-com .all a{color:var(--green);font-weight:600;border-bottom-color:transparent}
+.vl-com .all a:hover{border-bottom-color:var(--green)}
+@media(max-width:600px){.vl-rep li{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <nav style="position:sticky;top:0;z-index:1000;background:var(--ivory);border-bottom:1px solid var(--border)">
@@ -808,7 +825,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 
 <div class="sec ivory2"><div class="si">
 <div class="notice" style="font-size:var(--md)"><strong>Intervention locale :</strong> Notre siège social est à Les Abymes. Luc Silvestre connait parfaitement la commune, ses notaires et ses spécificités foncières.</div>
-<div class="stat-row"><div class="stat-box"><div class="stat-num">3 à 6 mois</div><div class="stat-lab">durée médiation amiable</div></div><div class="stat-box"><div class="stat-num">1 500-4 000</div><div class="stat-lab">euros pour une médiation</div></div><div class="stat-box"><div class="stat-num">8/10</div><div class="stat-lab">conflits résolus amiablement</div></div></div>
+<div class="stat-row"><div class="stat-box"><div class="stat-num">3 à 6 mois</div><div class="stat-lab">durée médiation amiable</div></div><div class="stat-box"><div class="stat-num">1 500 à 4 000</div><div class="stat-lab">euros pour une médiation</div></div><div class="stat-box"><div class="stat-num">8/10</div><div class="stat-lab">conflits résolus amiablement</div></div></div>
 </div></div>
 
 <div class="sec ivory"><div class="si"><div class="row2">
@@ -816,23 +833,15 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 <div class="sl g">Nos services à Les Abymes</div>
 <h2 class="sh">Accompagnement local et personnalisé.</h2>
 <p class="sp">Que vous ayez une succession bloquée, un terrain en indivision ou besoin de préparer votre transmission, TransmiExpert intervient à Les Abymes et dans les quartiers de Grand-Camp, Boissard, Providence, Boisripaux.</p>
-<div style="display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem">
-<div class="card"><h3>Médiation successorale</h3><p class="sp" style="margin:0">Débloquer une succession conflictuelle grâce à un tiers neutre et confidentiel.</p></div>
-<div class="card"><h3>Sortie d'indivision</h3><p class="sp" style="margin:0">Clarifier les options pour un terrain ou une maison en indivision, y compris via la loi Letchimy.</p></div>
-<div class="card"><h3>Pack Sérénité, dès 90 €</h3><p class="sp" style="margin:0">Votre livret de transmission patrimoniale en ligne, avec l'assistance de Luc Silvestre en option.</p></div>
-</div>
+<ul class="vl"><li><h3>Médiation successorale</h3><p>Débloquer une succession conflictuelle grâce à un tiers neutre et confidentiel.</p></li><li><h3>Sortie d'indivision</h3><p>Clarifier les options pour un terrain ou une maison en indivision, y compris via la loi Letchimy.</p></li><li><h3>Pack Sérénité, dès 90 €</h3><p>Votre livret de transmission patrimoniale en ligne, avec l'assistance de Luc Silvestre en option.</p></li></ul>
 </div>
 <div>
-<div class="sl g">Points de repere locaux</div>
+<div class="sl g">Points de repère locaux</div>
 <h2 class="sh">Nous connaissons votre commune.</h2>
-<div style="display:flex;flex-direction:column;gap:.75rem;margin-top:1.5rem">
-<div style='display:flex;align-items:flex-start;gap:1rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:12px'><div><p style='font-size:var(--base);font-weight:600;color:var(--dark);margin-bottom:.2rem'>Espace Rocade Grand-Camp</p><p style='font-size:var(--sm);color:var(--muted)'>Notre adresse exacte</p></div></div><div style='display:flex;align-items:flex-start;gap:1rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:12px'><div><p style='font-size:var(--base);font-weight:600;color:var(--dark);margin-bottom:.2rem'>Centre-ville</p><p style='font-size:var(--sm);color:var(--muted)'>Accessible facilement</p></div></div><div style='display:flex;align-items:flex-start;gap:1rem;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:12px'><div><p style='font-size:var(--base);font-weight:600;color:var(--dark);margin-bottom:.2rem'>Tribunal mixte de commerce</p><p style='font-size:var(--sm);color:var(--muted)'>Coordonnes si recours judiciaire nécessaire</p></div></div>
-</div>
+<ul class="vl vl-rep"><li><strong>Espace Rocade Grand-Camp</strong><span>Notre adresse exacte</span></li><li><strong>Centre-ville</strong><span>Accessible facilement</span></li><li><strong>Tribunal mixte de commerce</strong><span>Coordonnes si recours judiciaire nécessaire</span></li></ul>
 <div style="margin-top:1.5rem">
 <div class="sl g">Communes proches</div>
-<div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem">
-<a href='pointe-a-pitre.html' style='display:inline-flex;padding:.35rem .85rem;background:var(--ivory2);border:1px solid var(--border);border-radius:20px;font-size:var(--xs);font-weight:600;color:var(--muted);text-decoration:none'>Pointe-à-Pitre</a><a href='baie-mahault.html' style='display:inline-flex;padding:.35rem .85rem;background:var(--ivory2);border:1px solid var(--border);border-radius:20px;font-size:var(--xs);font-weight:600;color:var(--muted);text-decoration:none'>Baie-Mahault</a><a href='le-gosier.html' style='display:inline-flex;padding:.35rem .85rem;background:var(--ivory2);border:1px solid var(--border);border-radius:20px;font-size:var(--xs);font-weight:600;color:var(--muted);text-decoration:none'>Le Gosier</a>
-</div>
+<ul class="vl-com"><li><a href="pointe-a-pitre.html">Pointe-à-Pitre</a></li><li><a href="baie-mahault.html">Baie-Mahault</a></li><li><a href="le-gosier.html">Le Gosier</a></li><li class="all"><a href="guadeloupe.html">Toutes les communes de Guadeloupe</a></li></ul>
 </div>
 </div>
 </div></div></div>
