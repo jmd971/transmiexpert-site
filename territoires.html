@@ -776,61 +776,50 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 </div>
 
 <div class="sec ivory"><div class="si">
-  <div class="grid3" style="gap:2rem;align-items:start">
-    <div style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden">
-  <div style="padding:1.75rem 2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:1rem">
-    <span style="font-size:2rem"></span>
-    <div>
-      <h3 style="font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--dark)">Guadeloupe</h3>
-      <p style="font-size:var(--sm);color:var(--muted);margin-top:.15rem">971, Présence directe, Siège aux Abymes</p>
+  <style>
+    .terr{border-top:1px solid var(--border)}
+    .terr-row{display:grid;grid-template-columns:1fr;gap:.75rem 3rem;padding:1.6rem 0;border-bottom:1px solid var(--border)}
+    .terr-head h3{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--dark);line-height:1.2}
+    .terr-dep{font-family:var(--sans);font-size:.8rem;font-weight:600;color:var(--muted);letter-spacing:.04em;margin-left:.35rem;vertical-align:.15em}
+    .terr-head p{font-size:.95rem;color:var(--muted);margin-top:.35rem;max-width:34ch}
+    .terr-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem 0;align-content:start}
+    .terr-list li{font-size:1rem;line-height:1.5}
+    .terr-list li:not(:last-child)::after{content:",";margin-right:.55rem}
+    .terr-list a{color:var(--dark);text-decoration:none;border-bottom:1px solid var(--border);transition:border-color .15s,color .15s}
+    .terr-list a:hover{color:var(--green);border-color:var(--green)}
+    .terr-all a{color:var(--green);font-weight:600;border-bottom-color:transparent}
+    .terr-all a:hover{border-bottom-color:var(--green)}
+    @media(min-width:760px){.terr-row{grid-template-columns:minmax(220px,2fr) 5fr;align-items:start}}
+  </style>
+  <div class="terr">
+    <div class="terr-row">
+      <div class="terr-head">
+        <h3>Guadeloupe <span class="terr-dep">971</span></h3>
+        <p>Luc intervient sur place. Cabinet aux Abymes.</p>
+      </div>
+      <ul class="terr-list"><li><a href="les-abymes.html">Les Abymes</a></li><li><a href="pointe-a-pitre.html">Pointe-à-Pitre</a></li><li><a href="baie-mahault.html">Baie-Mahault</a></li><li><a href="le-gosier.html">Le Gosier</a></li><li><a href="capesterre-belle-eau.html">Capesterre-Belle-Eau</a></li><li><a href="petit-bourg.html">Petit-Bourg</a></li><li><a href="sainte-anne.html">Sainte-Anne</a></li><li><a href="saint-francois.html">Saint-François</a></li><li><a href="sainte-rose.html">Sainte-Rose</a></li><li><a href="morne-a-l-eau.html">Morne-à-l'Eau</a></li><li><a href="gourbeyre.html">Gourbeyre</a></li><li class="terr-all"><a href="guadeloupe.html">Toutes les communes de Guadeloupe</a></li></ul>
     </div>
-  </div>
-  <div style="padding:1.5rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:.6rem">
-    <a href="les-abymes.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Les Abymes ★</a>
-<a href="pointe-a-pitre.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Pointe-à-Pitre</a>
-<a href="baie-mahault.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Baie-Mahault</a>
-<a href="le-gosier.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Le Gosier</a>
-<a href="capesterre-belle-eau.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Capesterre-Belle-Eau</a>
-<a href="petit-bourg.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Petit-Bourg</a>
-<a href="sainte-anne.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Sainte-Anne</a>
-<a href="saint-francois.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Saint-François</a>
-<a href="sainte-rose.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Sainte-Rose</a>
-<a href="morne-a-l-eau.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Morne-à-l'Eau</a>
-<a href="gourbeyre.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Gourbeyre</a>
-<a href="guadeloupe.html" style="background:var(--ivory2);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:500;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Toutes les communes</a>
-  </div>
-</div>
-    <div style="background:var(--ivory2);border:1px solid var(--border);border-radius:16px;overflow:hidden">
-  <div style="padding:1.75rem 2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:1rem">
-    <span style="font-size:2rem"></span>
-    <div>
-      <h3 style="font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--dark)">Martinique</h3>
-      <p style="font-size:var(--sm);color:var(--muted);margin-top:.15rem">972, Intervention coordonnée, Partenaires locaux</p>
+    <div class="terr-row">
+      <div class="terr-head">
+        <h3>Martinique <span class="terr-dep">972</span></h3>
+        <p>Rendez-vous en visioconférence, relais de partenaires sur place.</p>
+      </div>
+      <ul class="terr-list"><li><a href="fort-de-france.html">Fort-de-France</a></li><li><a href="le-lamentin.html">Le Lamentin</a></li><li><a href="le-robert.html">Le Robert</a></li><li><a href="le-francois.html">Le François</a></li><li class="terr-all"><a href="martinique.html">Toute la Martinique</a></li></ul>
     </div>
-  </div>
-  <div style="padding:1.5rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:.6rem">
-    <a href="fort-de-france.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Fort-de-France</a>
-<a href="le-lamentin.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Le Lamentin</a>
-<a href="le-robert.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Le Robert</a>
-<a href="le-francois.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Le François</a>
-<a href="martinique.html" style="background:var(--ivory2);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:500;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Toute la Martinique</a>
-  </div>
-</div>
-    <div style="background:var(--ivory2);border:1px solid var(--border);border-radius:16px;overflow:hidden">
-  <div style="padding:1.75rem 2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:1rem">
-    <span style="font-size:2rem"></span>
-    <div>
-      <h3 style="font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--dark)">Guyane</h3>
-      <p style="font-size:var(--sm);color:var(--muted);margin-top:.15rem">973, Visioconférence + partenaires locaux</p>
+    <div class="terr-row">
+      <div class="terr-head">
+        <h3>Guyane <span class="terr-dep">973</span></h3>
+        <p>Rendez-vous en visioconférence, relais de partenaires sur place.</p>
+      </div>
+      <ul class="terr-list"><li><a href="cayenne.html">Cayenne</a></li><li><a href="kourou.html">Kourou</a></li><li><a href="saint-laurent-du-maroni.html">Saint-Laurent-du-Maroni</a></li><li class="terr-all"><a href="guyane.html">Toute la Guyane</a></li></ul>
     </div>
-  </div>
-  <div style="padding:1.5rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:.6rem">
-    <a href="cayenne.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Cayenne</a>
-<a href="saint-laurent-du-maroni.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Saint-Laurent-du-Maroni</a>
-<a href="kourou.html" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:600;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Kourou</a>
-<a href="guyane.html" style="background:var(--ivory2);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;text-decoration:none;display:block;font-size:.9375rem;font-weight:500;color:var(--dark);transition:border-color .15s" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Toute la Guyane</a>
-  </div>
-</div>
+    <div class="terr-row">
+      <div class="terr-head">
+        <h3>Saint-Martin <span class="terr-dep">978</span></h3>
+        <p>Collectivité d'outre-mer : médiation de droit commun, en visioconférence.</p>
+      </div>
+      <ul class="terr-list"><li class="terr-all"><a href="saint-martin.html">La page Saint-Martin</a></li></ul>
+    </div>
   </div>
 </div></div>
 
@@ -871,7 +860,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:2rem">
   <div style="padding:1.25rem 1.5rem;background:#fff;border:1px solid var(--border);border-radius:12px">
     <div style="font-weight:700;margin-bottom:.4rem">Guadeloupe (971)</div>
-    <p style="color:var(--muted);font-size:.9rem;line-height:1.6">Présence directe. Luc Silvestre basé à Les Abymes. Déplacements sur place. Loi Letchimy applicable.</p>
+    <p style="color:var(--muted);font-size:.9rem;line-height:1.6">Présence directe. Luc Silvestre basé aux Abymes. Déplacements sur place. Loi Letchimy applicable.</p>
     <a href="guadeloupe.html" style="display:inline-block;margin-top:.75rem;color:var(--green);font-weight:600;font-size:.85rem;text-decoration:none">11 communes</a>
   </div>
   <div style="padding:1.25rem 1.5rem;background:#fff;border:1px solid var(--border);border-radius:12px">
